@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뷰 기초 만들기</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <template v-if="number === 1">
+            <div>1</div>
+        </template>
+        <div v-else-if="number === 2">2에염</div>
+        <div v-else>초과됐어염</div> -->
+        <div v-show="show" >Yes</div><br>
+        
+        <button @click="toggle">Toggle</button>    
+   </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                number : 1,
+                show : false
+            },
+            methods: {
+                increaseNum(){
+                    this.number++;
+                },
+                toggle(){
+                    this.show = !this.show;
+                }
+            }
+
+        })
+        </script>
+</body>
+</html>
+
+<!-- {{ nextYear('안녕하세요') }} 
+        <input :type="type" v-bind:value="inputData">
+        <a :href="getKossieCoderLink('kossiecoder')">코지 코더 채널</a>
+        {{ year }}<br>
+        <button v-on:click="plus">더하기</button>
+        <button v-on:click="minus">빼기</button> -->
+        <!-- <form V-on:submit.prevent="submit">
+             <input type ="text" :value = "text" @keyup="updateText" ><br> 
+            <input type ="text" v-model="text"><br>
+            {{ text }}<br>
+            <button type="submit">Submit</button> 
+            // el: '#app',
+            // data: {
+            //     text: 'text',   
+            //     year: 2018,
+            //     person: {
+            //         name: '민제',
+            //         age: 25,
+            //     },
+            //     inputData: 'hello',
+            //     type: 'number',
+            //     link: 'https://youtube.com/'
+            // },
+            // methods: {
+            //     plus(){
+            //         this.year++;
+            //     },
+            //     minus(){
+            //         this.year--;
+            //     },
+            //     submit(){
+            //         alert('submitted');
+            //         console.log('hello');
+            //     },
+            //     getKossieCoderLink(channel){
+                //         return this.link + channel;
+            //     },
+            //     nextYear(greeting){
+                //         return greeting + ' ! ' + this.person.name + '는 내년에' + (this.person.age + 1) + ' 살 입니다.';
+                //     },
+                //     otherMethod(){
+                    //         return this.nextYear();
+                    //     },
+            //     // updateText(event){
+            //     //    this.text = event.target.value;
+            //     // }
+            // }
+            
+        </form>-->
